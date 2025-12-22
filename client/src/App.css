@@ -203,3 +203,72 @@
     background-color: #059669;
     transform: scale(1.02);
 }
+
+.landing-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    color: white;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.get-started-btn {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ff6a00;
+    background: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.get-started-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+.landing-wrapper {
+    min-height: 100vh; /* Full screen height */
+    width: 100%;
+    display: flex;
+    align-items: center;      /* Centers horizontally */
+    justify-content: center;   /* Centers vertically */
+    background: radial-gradient(circle at center, #ff6200, #3730a3);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.landing-card {
+    text-align: center;       /* Centers text lines inside the card */
+    display: flex;
+    flex-direction: column;   /* Stacks H1, P, and Button */
+    align-items: center;      /* Centers the elements themselves */
+    max-width: 800px;         /* Prevents text from stretching too wide */
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.landing-card h1 {
+    font-size: 5rem;          /* Larger, impactful size */
+    font-weight: 900;
+    margin: 0 0 20px 0;
+    letter-spacing: -2px;
+}
+
+.landing-card p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    max-width: 600px;         /* Keeps the description readable */
+}
