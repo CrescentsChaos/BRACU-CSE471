@@ -14,6 +14,10 @@ const LandingPage = () => {
         <button className="get-started-btn" onClick={() => navigate('/share')}>
           Module 1
         </button>
+        <br />
+        <button className="get-started-btn" onClick={() => navigate('/share')}>
+          Module 2
+        </button>
       </div>
     </div>
   );

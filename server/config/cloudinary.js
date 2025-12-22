@@ -2,8 +2,8 @@ const cloudinary = require('cloudinary').v2;
 const dotenv = require('dotenv');
 dotenv.config();
 console.log("Cloudinary Config Check:", {
-  name: process.env.CLOUDINARY_CLOUD_NAME ? "Loaded ✅" : "MISSING ❌",
-  key: process.env.CLOUDINARY_API_KEY ? "Loaded ✅" : "MISSING ❌"
+  name: process.env.CLOUDINARY_CLOUD_NAME ? "Loaded" : "Missing",
+  key: process.env.CLOUDINARY_API_KEY ? "Loaded" : "Missing"
 });
 
 cloudinary.config({

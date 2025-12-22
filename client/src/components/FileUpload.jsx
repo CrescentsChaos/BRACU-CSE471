@@ -20,10 +20,10 @@ const FileUpload = () => {
     try {
       const res = await axios.post('http://localhost:5000/api/files/upload', formData);
       setUploadUrl(res.data.url);
-      alert("Upload Successful!");
+      //alert("Upload Successful!");
     } catch (err) {
       console.error(err);
-      alert("Upload failed. Check console.");
+      //alert("Upload failed!");
     } finally {
       setLoading(false);
     }
@@ -35,7 +35,7 @@ const FileUpload = () => {
         <input 
           type="file" 
           onChange={handleFileChange} 
-          accept="image/*,.pdf" 
+          accept="image/*,.pdf,.png,.webp,.gif,.jpeg,.jpg" 
           className="file-input-custom"
         />
         <button 

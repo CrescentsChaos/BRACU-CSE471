@@ -4,7 +4,6 @@ const multer = require('multer');
 const cloudinary = require('../config/cloudinary');
 const fs = require('fs');
 
-// CHANGE THIS LINE: rename File to FileModel
 const FileModel = require('../models/File'); 
 
 const upload = multer({ dest: 'uploads/' });
@@ -20,7 +19,6 @@ router.post('/upload', upload.single('myFile'), async (req, res) => {
       folder: 'my_file_sharing_app'
     });
 
-    // CHANGE THIS LINE: Use FileModel instead of File
     const newFile = new FileModel({
       name: req.file.originalname,
       url: result.secure_url,
