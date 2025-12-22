@@ -1,112 +1,205 @@
-/* Custom Properties for consistency */
-:root {
-  --primary: #4f46e5;       /* Modern Indigo */
-  --primary-hover: #4338ca;
-  --bg-main: #f8fafc;       /* Soft Slate background */
-  --text-dark: #1e293b;
-  --text-muted: #64748b;
-  --card-bg: #ffffff;
-  --border-color: #e2e8f0;
-  --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+/* Custom App Styling */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+.app-background {
+    min-height: 100vh;
+    background: radial-gradient(circle at top left, #f8fafc, #e2e8f0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    font-family: 'Inter', sans-serif;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.main-card {
+    width: 100%;
+    max-width: 550px;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
-body {
-  background-color: var(--bg-main);
-  color: var(--text-dark);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  -webkit-font-smoothing: antialiased;
+.header-gradient {
+    background: linear-gradient(135deg, #ff4400 0%, #ff8c00 100%);
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
 }
 
-/* Layout Container */
-.app-container {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+.header-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
-/* The Main Card */
-.upload-card {
-  background: var(--card-bg);
-  width: 100%;
-  max-width: 550px;
-  border-radius: 16px;
-  box-shadow: var(--shadow);
-  overflow: hidden;
-  border: 1px solid var(--border-color);
+.header-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    margin-bottom: 8px;
 }
 
-/* Header Section */
-.card-header {
-  background: var(--primary);
-  padding: 40px 20px;
-  text-align: center;
-  color: white;
+.header-subtitle {
+    color: #e0e7ff;
+    font-weight: 500;
 }
 
-.card-header h1 {
-  font-size: 1.75rem;
-  font-weight: 800;
-  letter-spacing: -0.025em;
-  margin-bottom: 8px;
+.content-area {
+    padding: 32px;
 }
 
-.card-header p {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 0.95rem;
-}
-
-/* Content Body */
-.card-body {
-  padding: 32px;
+.info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
 }
 
 .section-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 4px;
-  color: var(--text-dark);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #1e293b;
 }
 
-.section-subtitle {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  margin-bottom: 24px;
+.section-desc {
+    font-size: 0.875rem;
+    color: #64748b;
 }
 
-/* The Dropzone / Upload area wrapper */
-.upload-wrapper {
-  background-color: #f1f5f9;
-  border: 2px dashed #cbd5e1;
-  border-radius: 12px;
-  padding: 20px;
-  transition: all 0.2s ease;
+.status-badge {
+    background: #ecfdf5;
+    color: #059669;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
-.upload-wrapper:hover {
-  border-color: var(--primary);
-  background-color: #eff6ff;
+.upload-zone {
+    background: #f8fafc;
+    border-radius: 16px;
+    border: 2px dashed #cbd5e0;
+    padding: 20px;
+    transition: all 0.2s ease-in-out;
 }
 
-/* Footer Section */
+.upload-zone:hover {
+    border-color: #ff4400;
+    background: #f1f5f9;
+}
+
 .card-footer {
-  padding: 16px;
-  text-align: center;
-  border-top: 1px solid var(--border-color);
-  background-color: #fcfcfd;
+    background: #f8fafc;
+    border-top: 1px solid #f1f5f9;
+    padding: 16px;
+    text-align: center;
 }
 
 .footer-text {
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #94a3b8;
+    font-size: 0.7rem;
+    color: #94a3b8;
+    letter-spacing: 0.15em;
+    font-weight: 700;
+}
+/* Base styles for the button */
+.upload-button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Style when the button is ready to click */
+.btn-active {
+  background-color: #ff4400; /* Indigo */
+  color: white;
+}
+
+.btn-active:hover {
+  background-color: #ff4400;
+  transform: translateY(-1px);
+}
+
+/* Style when the button is loading/disabled */
+.btn-loading {
+  background-color: #9ca3af; /* Gray */
+  color: #f3f4f6;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.input-group {
+    display: flex;
+    flex-direction: column; /* Stacks the input and button vertically */
+    gap: 20px;              /* This creates the vertical space you need */
+    width: 100%;
+}
+
+.file-input-custom {
+    width: 100%;
+    padding: 12px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Optional: Style the "Choose File" text inside the input */
+.file-input-custom::file-selector-button {
+    background: #ff4400;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    margin-right: 15px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.success-area {
+    margin-top: 24px;
+    padding: 16px;
+    background-color: #f0fdf4; /* Light green background */
+    border: 1px solid #bbf7d0; /* Green border */
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    animation: fadeIn 0.4s ease-out; /* Smooth entrance */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.success-text {
+    color: #166534;
+    font-size: 0.95rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.view-link {
+    display: inline-block;
+    color: #ffffff;
+    background-color: #10b981; /* Emerald green */
+    padding: 8px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.view-link:hover {
+    background-color: #059669;
+    transform: scale(1.02);
 }
