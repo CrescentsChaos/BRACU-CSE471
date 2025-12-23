@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const cloudinary = require('./config/cloudinary');
-const fileRoutes = require('./routes/file'); 
+const fileRoutes = require('./routes/fileRoutes'); 
+const courseRoutes = require('./routes/courseRoutes');
 //Initialize App & Environment
 dotenv.config();
 const app = express();
@@ -20,9 +21,10 @@ mongoose.connect(process.env.MONGO_URI)
 
 //outes
 app.use('/api/files', fileRoutes);
+app.use('/api/courses', courseRoutes);
 
 app.get('/', (req, res) => {
-  res.send('File Sharing API is running...');
+  res.send('Skill Swap APIs are running...');
 });
 
 //Error Handling Middleware
