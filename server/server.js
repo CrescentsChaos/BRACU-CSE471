@@ -5,6 +5,7 @@ const dotenv = require('dotenv');
 const cloudinary = require('./config/cloudinary');
 const fileRoutes = require('./routes/fileRoutes'); 
 const courseRoutes = require('./routes/courseRoutes');
+const workspaceRoutes = require('./routes/workspace');
 //Initialize App & Environment
 dotenv.config();
 const app = express();
@@ -13,6 +14,7 @@ const app = express();
 app.use(cors()); 
 app.use(express.json()); 
 app.use(express.urlencoded({ extended: true }));
+app.use('/api/workspace', workspaceRoutes);
 
 //Database Connection
 mongoose.connect(process.env.MONGO_URI)
