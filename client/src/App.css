@@ -365,3 +365,52 @@
     font-size: 12px;
     font-weight: 600;
 }
+.workspace-container {
+    padding: 30px;
+    background: #f4f5f7;
+    min-height: 100vh;
+}
+
+.task-board {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px 0;
+}
+
+.task-card {
+    background: white;
+    min-width: 250px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-top: 5px solid #4f46e5;
+}
+
+.file-link {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #4f46e5;
+    text-decoration: underline;
+}
+/* Stack buttons vertically on landing page */
+.button-group-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+/* Green theme for Module 3 */
+.workspace-btn {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+}
+
+.workspace-head {
+    background: linear-gradient(135deg, #065f46 0%, #10b981 100%) !important;
+}
+
+.workspace-card {
+    max-width: 900px; /* Give the workspace more room for the task board */
+}
