@@ -371,7 +371,7 @@
 }
 
 .workspace-head {
-    background: linear-gradient(135deg, #059669 0%, #10b981 100%) !important;
+    background: linear-gradient(135deg, #ff4400 0%, #ff4400 100%) !important;
 }
 
 /* Task Creation Area */
@@ -399,12 +399,12 @@
 }
 
 .task-form input:focus, .task-form textarea:focus {
-    border-color: #10b981;
+    border-color: #ff4400;
     box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
 }
 
 .create-task-btn {
-    background: #10b981;
+    background: #ff4400;
     color: white;
     padding: 12px;
     border-radius: 12px;
@@ -415,7 +415,7 @@
 }
 
 .create-task-btn:hover {
-    background: #059669;
+    background: #ff4400;
     transform: translateY(-2px);
 }
 
@@ -432,7 +432,7 @@
     padding: 20px;
     border-radius: 18px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    border-left: 6px solid #10b981;
+    border-left: 6px solid #ff4400;
     transition: 0.3s;
 }
 
@@ -460,7 +460,7 @@
     margin-top: 15px;
     padding: 6px 12px;
     background: #ecfdf5;
-    color: #059669;
+    color: #ff4400;
     border-radius: 8px;
     font-size: 0.8rem;
     text-decoration: none;
